@@ -6,7 +6,7 @@ This web application is designed to help users keep track of their job applicati
 1. **Clone the repository**:
     ```bash
     git clone https://github.com/moysser/curro.git
-    cd job-application-tracker
+    cd curror
     ```
 2. **Install dependencies**:
     ```bash
