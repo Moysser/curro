@@ -60,12 +60,6 @@ This web application is designed to help users keep track of their job applicati
    git clone https://github.com/moysser/curro.git
    cd curro
    ```
-   =======
-   `bash
-    git clone https://github.com/moysser/curro.git
-    cd curror
-    `
-   > > > > > > > refs/remotes/origin/main
 2. **Install dependencies**:
    ```bash
    npm install
