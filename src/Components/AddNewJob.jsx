@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const AddNewJobs = ({ setJobModal, onAddJob }) => {
   const [jobTitle, setJobTitle] = useState("");
   const [companyName, setCompanyName] = useState("");
   const [applicationDate, setApplicationDate] = useState("");
   const [status, setStatus] = useState("applied");
+  const [notes, setNotes] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -13,6 +14,7 @@ const AddNewJobs = ({ setJobModal, onAddJob }) => {
       companyName,
       applicationDate,
       status,
+      notes,
     };
     onAddJob(newJob);
     setJobTitle("");
@@ -52,6 +54,7 @@ const AddNewJobs = ({ setJobModal, onAddJob }) => {
               className="border border-light-gray rounded-md p-2 outline-none focus:ring-[1px] focus:ring-[#E0E1E6]"
               required
             />
+
             <select
               value={status}
               onChange={(e) => setStatus(e.target.value)}
@@ -63,6 +66,13 @@ const AddNewJobs = ({ setJobModal, onAddJob }) => {
               <option value="offered">Offered</option>
               <option value="rejected">Rejected</option>
             </select>
+            <textarea
+              placeholder="Notes (recruiter name, follow-up date, etc.)"
+              value={notes}
+              onChange={(e) => setNotes(e.target.value)}
+              rows={4}
+              className="border border-light-gray rounded-md p-2 outline-none focus:ring-[1px] focus:ring-[#E0E1E6]"
+            />
             <div className="flex gap-3 justify-end">
               <button
                 type="submit"
@@ -73,7 +83,7 @@ const AddNewJobs = ({ setJobModal, onAddJob }) => {
               <button
                 type="button"
                 onClick={() => setJobModal(false)}
-                className="bg-light-gray text-primary-text rounded-md py-2 px-4"
+                className="bg-grays-300 text-primary-text rounded-md py-2 px-4"
               >
                 Cancel
               </button>
