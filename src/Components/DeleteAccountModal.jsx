@@ -1,9 +1,7 @@
-import React from "react";
-
-const DeleteAccountModal = ({setDeleteAccountModal}) => {
-    const handleCancel = () => {
-      setDeleteAccountModal(false);
-    };
+const DeleteAccountModal = ({ setDeleteAccountModal }) => {
+  const handleCancel = () => {
+    setDeleteAccountModal(false);
+  };
   return (
     <div className="fixed inset-0 bg-[#000]/50 z-40 flex justify-center items-center">
       <div className="bg-white rounded-md py-8 px-6">
@@ -20,10 +18,15 @@ const DeleteAccountModal = ({setDeleteAccountModal}) => {
           <p>Are you sure you want to delete account?</p>
         </div>
         <div className="flex gap-4 justify-end">
-          <button className="py-2 px-3 text-sm font-medium text-center text-white bg-error rounded-md">
+          <button className="py-2 px-3 text-sm font-medium text-center text-white bg-rejected rounded-md">
             Delete
           </button>
-          <button onClick={handleCancel}>Cancel</button>
+          <button
+            className="text-grays-900 bg-grays-300 py-2 px-3 text-sm font-medium rounded-md"
+            onClick={handleCancel}
+          >
+            Cancel
+          </button>
         </div>
       </div>
     </div>

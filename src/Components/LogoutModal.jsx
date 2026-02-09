@@ -1,9 +1,8 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 const LogoutModal = ({ setOpenLogoutModal }) => {
   const closeLogoutModal = () => {
-    setOpenLogoutModal(false); 
+    setOpenLogoutModal(false);
   };
 
   return (
@@ -22,10 +21,18 @@ const LogoutModal = ({ setOpenLogoutModal }) => {
           <p>Are you sure you want to log out?</p>
         </div>
         <div className="flex gap-4 justify-end">
-          <Link to="/login" className="py-2 px-3 text-sm font-medium text-center text-white bg-error rounded-md">
+          <Link
+            to="/login"
+            className="py-2 px-3 text-sm font-medium text-center text-white bg-rejected rounded-md"
+          >
             Logout
           </Link>
-          <button onClick={closeLogoutModal}>Cancel</button>{" "}
+          <button
+            className="py-2 px-3 text-sm font-medium text-center text-grays-900 bg-grays-300 rounded-md"
+            onClick={closeLogoutModal}
+          >
+            Cancel
+          </button>{" "}
         </div>
       </div>
     </div>

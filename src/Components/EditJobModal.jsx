@@ -29,7 +29,7 @@ const EditJobModal = ({ job, setEditModal, onEditJob }) => {
               value={editedJob.jobTitle}
               onChange={handleInputChange}
               placeholder="Job Title"
-              className="border border-light-gray rounded-md p-2 outline-none focus:ring-[1px] focus:ring-[#E0E1E6]"
+              className="border border-grays-300 rounded-md p-2 outline-none focus:ring-[1px] focus:ring-[#E0E1E6]"
               required
             />
             <input
@@ -38,7 +38,7 @@ const EditJobModal = ({ job, setEditModal, onEditJob }) => {
               value={editedJob.companyName}
               onChange={handleInputChange}
               placeholder="Company Name"
-              className="border border-light-gray rounded-md p-2 outline-none focus:ring-[1px] focus:ring-[#E0E1E6]"
+              className="border border-grays-300 rounded-md p-2 outline-none focus:ring-[1px] focus:ring-[#E0E1E6]"
               required
             />
             <input
@@ -47,14 +47,14 @@ const EditJobModal = ({ job, setEditModal, onEditJob }) => {
               value={editedJob.applicationDate}
               onChange={handleInputChange}
               placeholder="Application Date"
-              className="border border-light-gray rounded-md p-2 outline-none focus:ring-[1px] focus:ring-[#E0E1E6]"
+              className="border  border-grays-300 rounded-md p-2 outline-none focus:ring-[1px] focus:ring-[#E0E1E6]"
               required
             />
             <select
               name="status"
               value={editedJob.status}
               onChange={handleInputChange}
-              className="border border-light-gray rounded-md p-2 outline-none focus:ring-[1px] focus:ring-[#E0E1E6]"
+              className="border  border-grays-300 rounded-md p-2 outline-none focus:ring-[1px] focus:ring-[#E0E1E6]"
               required
             >
               <option value="applied">Applied</option>
@@ -62,18 +62,27 @@ const EditJobModal = ({ job, setEditModal, onEditJob }) => {
               <option value="offered">Offered</option>
               <option value="rejected">Rejected</option>
             </select>
+            <textarea
+              name="notes"
+              value={editedJob.notes || ""}
+              onChange={handleInputChange}
+              rows={4}
+              placeholder="Notes (recruiter name, follow-ups, salary, etc.)"
+              className="border  border-grays-200 rounded-md p-2 outline-none focus:ring-[1px] focus:ring-[#E0E1E6]"
+            />
+
             <div className="flex gap-3 justify-end">
               <button
                 type="button"
                 onClick={handleSaveChanges}
                 className="bg-black text-white rounded-md py-2 px-4"
               >
-                Save
+                update
               </button>
               <button
                 type="button"
                 onClick={handleCancel}
-                className="bg-light-gray text-primary-text rounded-md py-2 px-4"
+                className="bg-grays-300 text-primary-text rounded-md py-2 px-4"
               >
                 Cancel
               </button>

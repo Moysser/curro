@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { SidebarMenuItem } from "./SidebarMenuItem";
-import { RiLogoutCircleRFill, RiSettings5Fill } from "react-icons/ri";
+import { SidebarMenuItem } from "./SidebarMenuItems";
+import { RiArrowLeftFill, RiSettings5Fill } from "react-icons/ri";
 import { BsLayoutSidebarInset } from "react-icons/bs";
 import { Link, useLocation } from "react-router-dom";
 import LogoutModal from "./LogoutModal";
@@ -22,7 +22,7 @@ const SideBar = () => {
 
   const findPageTitle = () => {
     const currentItem = menuItems.find((item) =>
-      location.pathname.endsWith(item.path)
+      location.pathname.endsWith(item.path),
     );
     if (currentItem) {
       setPageTitle(currentItem.label);
@@ -62,14 +62,11 @@ const SideBar = () => {
       )}
 
       <div
-        className={`fixed h-full top-0 left-0 bottom-0 z-40 w-56 py-4 lg:py-6 transition-transform 
- ${
-   openSidebar ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
- } bg-[#19211D]`}
+        className={`fixed h-full top-0 left-0 bottom-0 z-40 w-56 py-4 lg:py-6 transition-transform ${openSidebar ? "translate-x-0" : "-translate-x-full lg:translate-x-0"} bg-[#19211D]`}
       >
-        <div className="rounded-[20px] overflow-y-auto px-4 bg-[#19211D] text-white h-full">
+        <div className="rounded-[20px] overflow-y-auto px-4 text-white h-full">
           <div className="flex items-center justify-between pl-6">
-            <p className="">Job Tracker</p>
+            <p className="font-bold "> Curro job tracker</p>
             <button
               className="text-xl lg:hidden"
               title="Minimize Sidebar"
@@ -85,21 +82,22 @@ const SideBar = () => {
               <li key={item.id} onClick={toggleMenu}>
                 <Link
                   to={item.path}
-                  className="flex items-center gap-2 py-2 pl-5 rounded-full cursor-pointer hover:bg-[#E0E1E0] hover:text-primary-text transition-colors duration-300"
+                  className="flex border-b-4 items-center gap-2 py-2 pl-5 rounded-full cursor-pointer hover:bg-[#E0E1E0] hover:text-primary-text duration-300hover:-translate-y-1 hover:scale-105 transition-transform  duration-350 ease-[cubic-bezier(0.4,0,0.2,1)]"
                 >
                   <span className="text-xl">{item.icon}</span>
-                  <h4 className="">{item.label}</h4>
+
+                  <span className="text-base font-medium">{item.label}</span>
                 </Link>
               </li>
             ))}
           </ul>
         </div>
-        <div className="my-4 rounded shadow-sm absolute bottom-1 bg-[#19211D] w-44">
+        <div className="my-4 rounded shadow-sm absolute bottom-1 w-44">
           <ul className="py-3 text-white space-y-2">
             <li>
               <Link
                 to="settings"
-                className="flex items-center gap-2 py-2 pl-5 rounded-full cursor-pointer hover:bg-[#E0E1E0] hover:text-primary-text transition-colors duration-300"
+                className="flex items-center gap-2 py-2 pl-5 rounded-full cursor-pointer hover:bg-[#E0E1E0] hover:text-primary-text transition-colors duration-300 no-underline"
                 onClick={toggleMenu}
               >
                 <span className="text-xl">
@@ -117,7 +115,7 @@ const SideBar = () => {
                 }}
               >
                 <span className="text-xl">
-                  <RiLogoutCircleRFill />
+                  <RiArrowLeftFill />
                 </span>
                 <div className="text-sm">Logout</div>
               </div>
