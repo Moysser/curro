@@ -1,8 +1,6 @@
-import React from 'react'
-
 function Jobsearch() {
   return (
-    <div className='h-screen'>
+    <div className="">
       <h2 className="text-teal-dark text-3xl font-semibold mb-6">Job Search</h2>
 
       <form className="max-w-md">
@@ -36,4 +34,4 @@ function Jobsearch() {
   );
 }
 
-export default Jobsearch
+export default Jobsearch;

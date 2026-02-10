@@ -5,6 +5,7 @@ import { BsBriefcase } from "react-icons/bs";
 import DashboardCard from "../Components/DashboardCard";
 import ApplicationStatsChart from "../Components/ApplicationStatsChart";
 import "chart.js/auto";
+import { resources } from "../utils/data";
 
 const Dashboard = () => {
   const [userName, setUserName] = useState("");
@@ -20,28 +21,6 @@ const Dashboard = () => {
     setUserName(storedUser.name || "");
     setUserEmail(storedUser.email || "");
   }, []);
-
-  const resources = [
-    {
-      title: "Resume and cover letter template",
-      viewUrl: "https://zety.com/cover-letter-templates",
-    },
-    {
-      title: "Interview preparation guide",
-      viewUrl:
-        "https://www.themuse.com/advice/the-ultimate-interview-guide-30-prep-tips-for-job-interview-success",
-    },
-    {
-      title: "Job search strategies",
-      viewUrl: "https://www.careerflow.ai/blog/job-search-guide",
-    },
-    {
-      title: "Networking tips",
-      viewUrl: "https://hbr.org/2023/03/a-beginners-guide-to-networking",
-    },
-    { title: "Career development plan", viewUrl: "" },
-    { title: "Salary negotiation tactics", viewUrl: "" },
-  ];
 
   const getGreeting = () => {
     const currentHour = new Date().getHours();
@@ -70,7 +49,7 @@ const Dashboard = () => {
             <div className="bg-dark-gray h-1.5 rounded-full w-20"></div>
           </div>
           <p className="mt-1 text-[12px]">45% done</p>
-          <div className="mt-6 grid grid-cols-2 lg:grid-cols-4 gap-3 mb-12">
+          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-12">
             <DashboardCard
               to="/dashboard/profile"
               icon={LuUserCircle2}

@@ -71,9 +71,7 @@ const Profile = () => {
   return (
     <div>
       <div>
-        <h2 className="text-primary-text text-3xl font-semibold mb-6">
-          Profile
-        </h2>
+        <h2 className="text-primary-text text-3xl font-semibold">Profile</h2>
         <div className="flex flex-col justify-center items-center mb-6">
           <div className="flex md:gap-4 md:justify-center justify-between items-center mt-4 mx-12">
             <div className="">
@@ -211,7 +209,7 @@ const Profile = () => {
                 disabled={!editingExperience}
                 className={`border-0 bg-white ${
                   editingExperience
-                    ? "rounded-md outline-none ring-1 ring-light-gray py-1.5 px-2 text-dark-gray shadow-sm focus:ring-[1px] focus:ring-gray font-normal bg-white"
+                    ? "rounded-md outline-none ring-1 ring-light-gray py-1.5 px-12 text-dark-gray shadow-sm focus:ring-[1px] focus:ring-gray font-normal bg-white"
                     : ""
                 }`}
               />

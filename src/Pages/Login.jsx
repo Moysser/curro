@@ -34,9 +34,11 @@ const Login = () => {
 
     if (user.email === email && user.password === password) {
       setFormError("");
-      navigate("/dashboard"); 
+      navigate("/dashboard");
     } else {
-      setFormError("Invalid email or password.");
+      setFormError(
+        "The email you entered isn’t connected to an account. Create a new account.",
+      );
     }
   };
 

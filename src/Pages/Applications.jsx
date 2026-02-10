@@ -27,11 +27,6 @@ const Applications = () => {
     setJobs((prev) => [newJob, ...prev]);
   };
 
-  // const handleUpdateJob = (id, patch) => {
-  //   const updatedJob = applicationsService.update(id, patch);
-  //   setJobs((prev) => prev.map((job) => (job.id === id ? updatedJob : job)));
-  // };
-
   useEffect(() => {
     // Save jobs to localStorage whenever it changes
     localStorage.setItem("jobs", JSON.stringify(jobs));
@@ -40,11 +35,6 @@ const Applications = () => {
   const handleOpenJobModal = () => {
     setShowJobModal(true);
   };
-
-  // const handleAddJob = (newJob) => {
-  //   const jobWithId = { ...newJob, id: Date.now() }; // Ensure each job has a unique ID
-  //   setJobs([...jobs, jobWithId]);
-  // };
 
   const handleEditJob = (updatedJob) => {
     setJobs(jobs.map((job) => (job.id === updatedJob.id ? updatedJob : job)));
@@ -194,7 +184,7 @@ const Applications = () => {
             <li className="me-2" key={tab}>
               <button
                 className={`inline-block p-4 ${
-                  activeTab === tab ? "border-b-2" : ""
+                  activeTab === tab ? "border-b-4" : ""
                 }`}
                 onClick={() => setActiveTab(tab)}
               >

@@ -9,7 +9,7 @@ const Settings = () => {
 
   const handleDeleteModal = () => {
     setShowDeleteAccountModal(true);
-  }
+  };
   return (
     <section className=" h-screen">
       <div className="max-w-2xl mb-12">
@@ -142,32 +142,32 @@ const Settings = () => {
           </div>
           {/* Cancel and Set New Password buttons */}
           <div className="mt-4 font-semibold gap-4 flex">
-            <Link
-              to="/dashboard/dashboard"
-              className="bg-light-gray text-dark-gray rounded-md py-2 px-4"
-            >
-              Cancel
-            </Link>
             <button
               type="submit"
               className="bg-black text-white rounded-md py-2 px-6 flex justify-center items-center gap-3 text-sm"
             >
               Save
             </button>
+            <Link
+              to="/dashboard/dashboard"
+              className="bg-grays-300 text-grays-900 rounded-md py-2 px-4"
+            >
+              Cancel
+            </Link>
           </div>
         </form>
       </div>
       {/* DELETE USER ACCOUNT */}
 
       <div>
-        <h2 className=" text-3xl font-semibold">Delete Account:</h2>
+        <h2 className=" text-3xl font-semibold">Delete account:</h2>
         <p className="text-gray mb-6">Permanently delete your account.</p>
         <button
           type="submit"
-          className="border border-[#af1818] text-[#af1818] rounded-md py-2 px-2.5 flex justify-center items-center gap-3"
+          className="border border-[#f6bcbc] text-[#af1818] rounded-md py-2 px-2.5 flex justify-center items-center gap-3 hover:text-white hover:bg-rose-600 hover:transition-all duration-300 font-medium"
           onClick={handleDeleteModal}
         >
-          Delete my Account
+          Delete my account
         </button>
       </div>
       {showDeleteAccountModal && (
