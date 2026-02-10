@@ -108,3 +108,12 @@ This web application is designed to help users keep track of their job applicati
 ### Contributing
 
 We welcome contributions! If you would like to contribute to the development of this project.
+
+### Screenshots
+
+<div align="center">
+   <img src="./src/screenshots/dashboard.png" alt="dashboard" width="600" />
+   <img src="./src/screenshots/app-card.png" alt="applications" width="600" />
+   <img src="./src/screenshots/app-list.png" alt="applications" width="600" />
+   <img src="./src/screenshots/settings.png" alt="settings" width="600" />
+</div>
