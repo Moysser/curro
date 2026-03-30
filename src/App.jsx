@@ -14,13 +14,13 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Login />} />
+          {/* <Route index element={<Login />} /> */}
           <Route path="signup" element={<Signup />} />
           <Route path="login" element={<Login />} />
         </Route>
         <Route path="/dashboard" element={<DashboardLayout />}>
           <Route index element={<Dashboard />} />
-          <Route path="dashboard" element={<Dashboard />} />
+          {/* <Route path="dashboard" element={<Dashboard />} /> */}
           <Route path="applications" element={<Applications />} />
           <Route path="job" element={<Jobsearch />} />
           <Route path="profile" element={<Profile />} />

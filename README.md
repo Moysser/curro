@@ -112,8 +112,8 @@ We welcome contributions! If you would like to contribute to the development of 
 ### Screenshots
 
 <div align="center">
-   <img src="./src/screenshots/dashboard.png" alt="dashboard" width="600" />
-   <img src="./src/screenshots/app-card.png" alt="applications" width="600" />
-   <img src="./src/screenshots/app-list.png" alt="applications" width="600" />
-   <img src="./src/screenshots/settings.png" alt="settings" width="600" />
+   <img src="./public/screenshots/dashboard.png" alt="dashboard" width="600" />
+   <img src="./public/screenshots/app-card.png" alt="applications" width="600" />
+   <img src="./public/screenshots/app-list.png" alt="applications" width="600" />
+   <img src="./public/screenshots/settings.png" alt="settings" width="600" />
 </div>
